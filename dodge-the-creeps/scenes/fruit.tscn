@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://thevvnqycdxh"]
+
+[ext_resource type="Texture2D" uid="uid://csnodh50jmryr" path="res://art/berryreal.png" id="1_dnhla"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b1bv3"]
+radius = 55.3957
+height = 156.545
+
+[node name="Fruit" type="RigidBody2D" groups=["fruits"]]
+position = Vector2(-8, -8)
+collision_mask = 0
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 2)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_dnhla")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 4)
+rotation = -0.834267
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CapsuleShape2D_b1bv3")
